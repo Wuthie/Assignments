@@ -7,6 +7,7 @@
 // program take in plain text and shows the encrypted version to the user
 
 import java.util.Scanner;
+import java.util.concurrent.CountDownLatch;
 public class A3_Q1 {
 
     public static void main(String[] args) {
@@ -14,18 +15,17 @@ public class A3_Q1 {
         System.out.println("Welcome to the 3D-Space Encryption-Decryption Program:" + 
                          "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++" + 
                          "\n\nPlease enter your plain text below: ");
+        char[] letters = "abcdefghijklmnopqrstuvwxyz".toCharArray();
         String plainText = keyboard.nextLine();
-        String encryptedText;
         keyboard.close();
-        int lengthString = plainText.length();
-        int count;
-        for (count = 0; count <= lengthString; count += 1){
+        System.out.print(plainText.charAt(2));
+        int count = 0;
+        String encryptedText[] = {} ;
+        for(count =0; count == plainText.length(); count += 1){
             char character = plainText.charAt(count);
-            if(Character.isLetter(character)){
-                char shifted = char(character )
+            if (Character.isLetter(character)){
+                char i = (char)((character + 1)%26);
             }
         }
-        System.out.print(count);
-        
     }
 }
