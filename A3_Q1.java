@@ -14,8 +14,18 @@ public class A3_Q1 {
         System.out.println("Welcome to the 3D-Space Encryption-Decryption Program:" + 
                          "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++" + 
                          "\n\nPlease enter your plain text below: ");
-        String input = keyboard.next();
+        String plainText = keyboard.nextLine();
+        String encryptedText;
         keyboard.close();
+        int lengthString = plainText.length();
+        int count;
+        for (count = 0; count <= lengthString; count += 1){
+            char character = plainText.charAt(count);
+            if(Character.isLetter(character)){
+                char shifted = char(character )
+            }
+        }
+        System.out.print(count);
         
     }
 }
