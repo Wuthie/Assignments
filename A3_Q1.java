@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.print.DocPrintJob;
+
 // -------------------------------------------------------
 // Assignment A3_Q1
 // Written by: Wuthie PANHA 40245548
@@ -14,36 +16,36 @@ public class A3_Q1 {
         System.out.println("Welcome to the 3D-Space Encryption-Decryption Program:" + 
                          "\n+++++++++++++++++++++++++++++++++++++++++++++++++++++++" + 
                          "\n\nPlease enter your plain text below: ");
-        String plainText = "";
-        plainText += keyboard.nextLine();
+        String plainText = keyboard.nextLine();
+        char[] plainChar = plainText.toCharArray(); 
+        //System.out.print(plainChar[0]);
         keyboard.close();
-        int textLength = plainText.length();
-        System.out.print(textLength);
-        int lettercount = 0;
-        int mode;
-        String swappedString = "";
-        char[] textAr = plainText.toCharArray();
-        for(int i = 0; i < textLength; i+=1){
-            char character = plainText.charAt(i);
-            if (Character.isLetter(character)){
-                lettercount+=1;
+        int i;
+        char checker;
+        //need a do while loop? to validate user input
+        do{
+            for(int x = 0; x < plainChar.length; x++){
+                checker = plainChar[x];}
+        }
+        while (!(checker.isletter)) 
+        for (i = 0; i < plainChar.length-1; i++){ 
+            if (i%2 == 0 && plainChar.length % 2 == 0){
+                char temp = plainChar[i];
+                plainChar[i] = plainChar[i+1];
+                plainChar[i+1] = temp;
+                new String(plainChar);
             }
-        if (lettercount % 2 == 0){ //mode 0 for even number of characters, mode 1 for odd number of characters
-            mode = 0;}
-        else mode = 1;
+            else if (i%2 != 0 && plainChar.length % 2 != 0){
+                char temp = plainChar[i];
+                plainChar[i] = plainChar[i+1];
+                plainChar[i+1] = temp;
+                new String(plainChar);
+            }
+        }
+        System.out.print(new String(plainChar));
+        }
         
-        if (mode == 0){
-            for (int x=0; x < textLength; x+=1){
-                char temp = textAr[x];
-                textAr[x] = textAr[x+1];
-                textAr[x+1] = temp;
-                swappedString+=textAr;
-                
-            }
-        }
-        System.out.print(swappedString);
 
         }
 
-    }
-}
+    
