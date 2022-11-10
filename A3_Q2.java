@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 // -------------------------------------------------------
 // Assignment A3_Q2
